@@ -11,7 +11,7 @@
 
 #define PORT 4125
 #define IP_ADDRESS "127.0.0.1"
-#define QUEUE_LENGTH 1
+#define QUEUE_LENGTH 10
 
 #define CLIENT_MESSAGE_SIZE client_msg_size()
 #define SERVER_MESSAGE_SIZE 30

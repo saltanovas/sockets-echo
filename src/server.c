@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -37,7 +36,7 @@ int init_server(unsigned short port_number, char *ip_address)
         return -1;
     }
 
-    if (listen(server_socket, 1) == -1)
+    if (listen(server_socket, QUEUE_LENGTH) == -1)
     {
         fprintf(stderr, RED "Failed to start listen for connections on a socket.\n\n" RESET);
         return -1;
