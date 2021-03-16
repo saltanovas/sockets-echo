@@ -8,7 +8,6 @@
 #include <arpa/inet.h>
 #include "client.h"
 #include "helpers.h"
-#include <sys/ioctl.h>
 
 int init_client(unsigned short port_number, char *ip_address)
 {
