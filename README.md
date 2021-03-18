@@ -1,6 +1,5 @@
 # Unix Sockets
 
-## Introduction
 Sockets are communication points on the same or different computers to exchange data. Although sockets can operate on many operating systems, **the program supports Unix only**. 
 
 ## Compilation
