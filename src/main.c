@@ -36,20 +36,12 @@ int main(int argc, char *argv[])
         if (strncmp(argv[1], "-s", strlen(argv[1])) == 0)
         {
             printf(GREEN "\nIntializing server on %s:%hu\n" RESET, IP_ADDRESS, port);
-
-            if ((sfd = init_server(port, IP_ADDRESS)) == -1)
-                exit(1);
-
-            accept_connections(sfd);
+            (sfd = init_server(port, IP_ADDRESS)) == -1 ? exit(1) : accept_connections(sfd);
         }
         else if (strncmp(argv[1], "-c", strlen(argv[1])) == 0)
         {
             printf(GREEN "\nInitializing client on %s:%hu\n" RESET, IP_ADDRESS, port);
-
-            if ((sfd = init_client(port, IP_ADDRESS)) == -1)
-                exit(1);
-
-            client_conversation(sfd);
+            (sfd = init_client(port, IP_ADDRESS)) == -1 ? exit(1) : client_conversation(sfd);
         }
         else
         {
